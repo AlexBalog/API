@@ -1,5 +1,5 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const UsuariosSchema = require('../models/modelsUsuarios');
 const verifyToken = require('../middlewares/authMiddleware'); // Middleware para validar el JWT
 const router = express.Router();

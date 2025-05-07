@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const usuariosSchema = require('../models/modelsUsuarios');
-const bcrypt = require('bcrypt'); // Importa bcrypt
+const bcrypt = require('bcryptjs'); // Importa bcrypt
 
 router.post('/login', async (req, res) => {
   const { email, contrasena } = req.body;
