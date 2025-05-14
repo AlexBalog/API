@@ -27,7 +27,7 @@ router.post('/login', async (req, res) => {
     };
 
     // Generar el token (con expiración de 1 hora)
-    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '24h' });
     res.json({ token });
   } catch (error) {
     res.status(500).json({ message: error.message });
